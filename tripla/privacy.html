@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー | トリプラ</title>
+<style>
+  :root {
+    color-scheme: light;
+    --paper: #FDF6E3;
+    --paper-raise: #F7EFD9;
+    --border: #E4DABF;
+    --text-strong: #586E75;
+    --text: #657B83;
+    --text-muted: #93A1A1;
+    --accent: #2AA198;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", sans-serif;
+    line-height: 1.8;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  h1 {
+    color: var(--text-strong);
+    font-size: 26px;
+    margin-bottom: 4px;
+  }
+  .updated {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+  }
+  h2 {
+    color: var(--text-strong);
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    color: var(--text-strong);
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+  p, li { font-size: 15px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .box {
+    background: var(--paper-raise);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 12px 0;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { color: var(--text-strong); font-weight: 700; width: 30%; }
+  footer {
+    margin-top: 60px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>プライバシーポリシー</h1>
+  <div class="updated">最終更新日：2026年9月15日</div>
+
+  <p>
+    本プライバシーポリシーは、旅行プランナーアプリ「トリプラ」（以下「本アプリ」）における、
+    利用者情報の取り扱いについて説明するものです。本アプリをご利用いただくことで、本ポリシーに同意したものとみなします。
+  </p>
+
+  <h2>1. 本アプリの基本的な考え方</h2>
+  <p>
+    本アプリは会員登録・ログインを必要とせず、行き先や移動手段などのプランデータは
+    お使いの端末内にのみ保存されます。外部に送信される情報は、後述する
+    「AIによる旅程生成」および「行き先検索」の機能を利用したときに限られます。
+  </p>
+
+  <h2>2. 取得する情報とその利用目的</h2>
+
+  <h3>2-1. 端末内にのみ保存される情報</h3>
+  <div class="box">
+    旅行プラン名・期間、登録した行き先（名称・住所・緯度経度・滞在希望時間・優先度・宿泊のチェックイン/アウト時刻）、
+    区間ごとの移動手段・所要時間、AIが生成した旅程データは、すべてお使いの端末内のみに保存されます。
+    これらのデータは、次の項目で説明する場合を除き、外部のサーバーに送信・保存されることはありません。
+  </div>
+
+  <h3>2-2. AIによる旅程生成を利用したときに送信される情報</h3>
+  <p>
+    「AIにプランを作ってもらう」機能を利用すると、そのプランに登録されている行き先名・優先度・カテゴリ（観光地/宿泊）・
+    宿泊のチェックイン/アウト時刻・区間ごとの移動手段と所要時間が、Google社が提供するAIモデル（Gemini、Firebase AI Logic経由）に送信され、
+    日程ごとのスケジュール作成に利用されます。送信されるのは操作したプランの内容のみで、氏名・メールアドレス等の連絡先情報は含まれません。
+  </p>
+
+  <h3>2-3. 行き先を検索したときに送信される情報</h3>
+  <p>
+    行き先の住所欄に入力した検索文字列、および候補から選択した場所の情報（名称・住所・緯度経度）は、
+    当社が運用するサーバー（Firebase Cloud Functions）を経由してGoogle Places APIに送信され、
+    候補の表示・位置情報の取得に利用されます。
+  </p>
+
+  <h3>2-4. 不正利用防止のために送信される情報</h3>
+  <p>
+    本アプリには会員登録機能はありませんが、AI機能・検索機能の不正利用（過剰なアクセス等）を防止するため、
+    匿名の識別子（Firebase Anonymous Authentication）およびアプリの正当性を検証する情報（Firebase App Check /
+    reCAPTCHA Enterprise、またはOSの端末証明機能）がGoogle社に送信されます。これらは氏名・メールアドレス等、
+    個人を特定する情報を含みません。
+  </p>
+
+  <h2>3. 第三者への情報提供</h2>
+  <p>本アプリは、上記2-2〜2-4に記載した範囲で、以下の外部サービスを利用しています。</p>
+  <table>
+    <tr><th>サービス</th><td>用途</td></tr>
+    <tr><td>Google Firebase（Firebase AI Logic / Gemini API）</td><td>AIによる旅程生成</td></tr>
+    <tr><td>Google Places API</td><td>行き先の検索・位置情報取得</td></tr>
+    <tr><td>Google Firebase App Check / reCAPTCHA Enterprise</td><td>不正利用防止のための端末検証</td></tr>
+    <tr><td>Google Firebase Authentication（匿名認証）</td><td>AI機能の利用回数管理</td></tr>
+  </table>
+  <p>
+    これらはいずれもGoogle LLCが提供するサービスです。詳細は
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleのプライバシーポリシー</a>
+    をご確認ください。本アプリは、上記以外の目的で利用者情報を第三者に提供・販売することはありません。
+    また、広告配信・行動追跡を目的としたSDKは組み込んでいません。
+  </p>
+
+  <h2>4. データの保管期間・削除</h2>
+  <p>
+    行き先やプランなどのデータは端末内にのみ保存されるため、本アプリをアンインストールすると、
+    これらのデータは端末から削除されます。当社側のサーバーには、これらのプラン内容を個人に紐づけて保存していません。
+  </p>
+
+  <h2>5. お子様の情報について</h2>
+  <p>
+    本アプリは13歳未満のお子様を主な対象とはしておらず、意図的にお子様から個人情報を収集することはありません。
+  </p>
+
+  <h2>6. 本ポリシーの変更</h2>
+  <p>
+    本ポリシーの内容は、法令の変更や本アプリの機能追加に応じて、予告なく変更される場合があります。
+    変更後の内容は、本ページに掲載した時点から効力を持つものとします。
+  </p>
+
+  <h2>7. お問い合わせ</h2>
+  <p>
+    本ポリシーに関するお問い合わせは、以下の窓口までお願いいたします。<br>
+    運営：トリプラ開発チーム<br>
+    お問い合わせフォーム：
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDicf72IVszgpFR9lpUp4ufPQZGgpXai1UQNMrdn0MnPuQug/viewform?usp=publish-editor" target="_blank" rel="noopener">こちら</a>
+  </p>
+
+  <footer>トリプラ プライバシーポリシー</footer>
+</div>
+</body>
+</html>
